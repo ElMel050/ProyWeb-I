@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+/* Estilos generales */
+body {
+    color: #ccc;
+    background-color: rgba(45, 45, 45, 255);
+}
+main {
+    color: #ffffff;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+}
+main .cont-nav{
+    background-color: #000;
+    width: 100%;
+    min-height: 2em;
+}
+main .navbar {
+    background-color: rgba(0, 0, 0, 255);
+    margin: 0;
+    color: rgba(236, 245, 255, 255);
+    display: block;         
+}
+main>video,img {
+    width: 100%;     /* Escala completa dentro del contenedor */
+    height: auto;
+}
+.separador{
+    height: 0.2rem;
+    background-color: rgb(122,122,122);
+    border-radius: 30%;
+    margin: 1.5rem 0;
+}
+.navbar>.container>#navbarNav>.btn {
+    background-color: rgba(10, 132, 255, 255);
+}
+/*                          Estilos para el video header */
+/* Video como fondo del contenedor */
+.video-background {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #000;
+    /* Color de fondo por si el video no carga */
+    padding-bottom: 56.25%; /* Mantener el ratio 16:9 */
+    height: 0;
+    width: 100%; /* Ancho completo */
+}
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%; /* Ajustar video para que cubra toda la pantalla */
+    min-height: 100%; /* Ajustar video para que cubra toda la pantalla */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    object-fit: cover; /* Asegura que el video no se distorsione */
+}
+/* Contenido y controles sobre el video */
+.content-overlay {
+    position: absolute; /* Asegura que se superponga al video */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box; /* Para incluir el padding en las dimensiones */
+}
+/* Fila superior con logo y título */
+.content-overlay .row {
+    width: 100%;
+}
+.content-overlay .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+.content-overlay .video-title {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: white;
+}
+/* Fila inferior con tres contenedores (botones, sinopsis y publicidad) */
+.content-overlay .row.justify-content-between {
+    display: flex;
+    justify-content: space-between;
+}
+.content-overlay .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-overlay .btn {
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-overlay .btn img {
+    width: 24px;
+    height: 24px;
+}
+/* Sinopsis y publicidad */
+.content-overlay .synopsis,
+.content-overlay .advertisement {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*                               Carrusel */
+.highlight-wrapper {
+    height: 18rem;    /* altura para editar*/
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    z-index: 2;
+    background-color: transparent;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.card {
+    min-width: 300px;
+    height: auto;
+    color: white;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+}
+
+.card img {
+    max-height: 200px;
+    border-radius: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.powered-by {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Flechas de navegación */
+.scroll-button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#scroll-left {
+    left: 1rem;
+    z-index: 5;
+}
+
+#scroll-right {
+    right: 1rem;
+    z-index: 6;
+}
+
+/*             Fin */
+/* Footer */
+footer {
+    background-color: rgba(30, 30, 30, 200);
+    color: #ccc;
+}
+
+footer .first-foot{
+    background-color: transparent;
+}
+.first-foot div{
+    background-color: rgba(45, 45, 45, 255);
+    padding: 1.2em;
+    border-radius: 5%;
+}
+.first-foot p{
+    font-size: 0.9rem;
+    margin: 0;
+    color: rgba(200, 200, 200, 250);
+}
+.first-foot .text{
+    font-size: 0.7rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .content-overlay .row.justify-content-between {
+        flex-direction: column;
+    }
+    .content-overlay .col-md-4 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+

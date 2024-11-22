@@ -1,0 +1,182 @@
+
+
+/*BUSCADOR DE SOPORTE*/ 
+#buscador {
+    display: flex ;
+    flex-direction: RIGHT;
+    align-items: center;
+    
+}
+/*CARRUSEL VIDEO*/ 
+.carrusel {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+ 
+}
+
+.imagen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 2s;
+}
+
+.imagen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*CUADROS DE SOPORTE*/ 
+.cuadro3 {
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .texto {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+.cuadro4 {
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .texto {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+/*IMAGENES DE TV y Casa*/ 
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cuadro-izquierdo,´{
+    width: 50%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .cuadro-derecho,´{
+    width: 60%;
+    background-color: #f2f2f2;
+    padding: 45px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  
+  
+  h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  
+  
+ /* TODO ACERCA DEL ENCABEZADO*/ 
+
+/* color y textura*/ 
+header{ 
+    background-color:rgb(223, 223, 223); 
+    color: #000000; 
+    min-height: 50px; 
+    
+} 
+ /*FORMA Y ESTILOS DEL TITULO*/ 
+header a{ 
+    color: #000000; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 13px; 
+} 
+header button{ 
+  color: #000000; 
+  text-decoration: none; 
+  text-transform: uppercase; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 17px; 
+} 
+ 
+header li{ 
+    float: centry; 
+    display: inline; 
+    padding: 0 40px 0 40px; 
+} 
+ 
+header nav{ 
+    float: right; 
+    margin-top: 10px; 
+} 
+/*color del resaltado de los titulos*/ 
+header .resaltado, header .actual a{ 
+  color:black; 
+  font-weight: bold; 
+  font-size: 21px; 
+} 
+
+.botooon {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.botooon:hover {
+  background-color: #3e8e41;
+}
+
+
+
+/*PIE DE PAGINA*/ 
+ 
+footer{ 
+    padding: 20px; 
+    margin-top: 20px; 
+    color: #000000; 
+    background-color:white; 
+    text-align: center; 
+} 
+ /*BOTON VER PELICULA*/ 
+ 
+
