@@ -39,6 +39,94 @@ main>video,img {
 .navbar>.container>#navbarNav>.btn {
     background-color: rgba(10, 132, 255, 255);
 }
+/* estilos para el formulario de sesion*/
+#SingIn{
+    padding: 0 30px;
+    background: linear-gradient(170deg, #92929bb7, #04356d);
+    max-width: 450px;
+    margin: 25px auto;
+    min-height: 650px;
+    min-width: 450px;
+    border-radius: 10px;
+    border: solid 1px;
+    box-shadow: 0px 0px 5px #ffffff;
+    h1{
+        background: linear-gradient(90deg, #010102, #6b6f74);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent ;
+        text-align: center;
+        font-size: 60px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    form{
+        max-width: 400px;
+        min-height: auto;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        font-size: 30px;
+        background: transparent;
+    }
+    form .user-ico{
+        height: 70px;
+        text-align: center;
+        font-size: 65px;
+    }
+    .input-group{
+        font-size: 1.2rem;
+        margin: 10px ;
+        padding: 0px 3px;
+        position: relative;
+        --primary: #0a1014;
+    }
+    .input{
+        all: unset;
+        color: #eeeeee;
+        padding: 2rem;
+        border: 1px solid #969696;
+        border-radius: 10px;
+        transition: 150ms
+            cubic-bezier(0.4,0,0.2,1); 
+    }
+    .label{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        color: #060916;
+        pointer-events: none;
+        transition: 150ms
+            cubic-bezier(0.4,0,0.2,1); 
+    }
+    input:focus{
+        border: 1px solid
+        var(--primary);
+    }
+    .input:is(:focus, :valid) ~ label{
+        transform: 
+            translateY(-120%)
+            scale(0.7);
+        background-color: #0024c2;
+        padding-inline: 0.3rem;
+        color: var(--primary);
+        color: #ececec;
+    }
+    .enviar {
+        padding: 15px 15px;
+        margin: 15px 30%;
+        background-color: #35535c;
+        color: white;
+        border-radius: 10px;
+        font-size: 30px;
+        box-shadow: 0px 3px 3px #000000d5;
+    }
+    .enviar:hover {
+        transform: scale(0.25rem);
+        background-color: #103991;
+        cursor: pointer;
+    }
+}
 /*                          Estilos para el video header */
 /* Video como fondo del contenedor */
 .video-background {

@@ -1,30 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--1519px  x  1300px-->
+<!--1519px  x  1300px-->
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Ver Apple</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/show.css">
 </head>
 <!--  ultima modificacion-->
+
 <body>
     <main class="container mx-auto">
         <!--Cualquier elemento a añadir al Body dentro de una <section> con la clase "mt-5" -->
         <!-- popover para el formulario -->
+        <section hidden>
+            <!-- Button trigger modal -->
+            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" data-mdb-modal-init
+                data-mdb-target="#staticBackdrop1">
+                Launch modal login form
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                aria-hidden="true">
+                <div class="modal-dialog d-flex justify-content-center">
+                    <div class="modal-content w-75">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel1">Sign in</h5>
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn-close"
+                                data-mdb-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-4">
+                            <form>
+                                <!-- Email input -->
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input type="email" id="email1" class="form-control" />
+                                    <label class="form-label" for="email1">Email address</label>
+                                </div>
+
+                                <!-- password input -->
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input type="password" id="password1" class="form-control" />
+                                    <label class="form-label" for="password1">Password</label>
+                                </div>
+
+                                <!-- Submit button -->
+                                <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                                    class="btn btn-primary btn-block">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+        </section>
         <section id="SingIn" hidden>
-            <div class="container h5">
-            <p>Formulario de Sesion</p>
-        </div>
+            <div class="container cont-form">
+                <h1>Iniciar Sesión</h1>
+                <form>
+                    <div class="user-ico"><i class="bi bi-person-circle"></i></div>
+                    <div class="input-group">
+                        <input type="text" class="input" required id="usuario">
+                        <label for="user" class="label">Usuario</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" class="input" required id="contrseña">
+                        <label for="password" class="label">Contraseña</label>
+                    </div>
+                    <button class="enviar" type="submit" onclick="validateUserAndPass()">Enviar</button>
+                </form>
+            </div>
         </section>
         <!-- navbar hader-->
         <div class="container-fluid  cont-nav mx-3" style="max-height: 1em;">
             <nav class="navbar navbar-expand-sm fixed-top">
                 <div class="container">
                     <a class=" navbar-brand" href="#inicio.html" style="max-width: 4rem;">
-                        <img loading="lazy" class="mx-3" style="border-radius:0.35em;border: solid 0.15rem #ffffff;" src="assets/icons/appleTV2.png" alt="Logo">
+                        <img loading="lazy" class="mx-3" style="border-radius:0.35em;border: solid 0.15rem #ffffff;"
+                            src="assets/icons/appleTV2.png" alt="Logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +88,12 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto ">
-                            <li class="nav-item px-1" style="display:flex;flex-direction: row;background-color:#ffffff; border-radius:0.5em;">
-                                <label style="padding-top: 0.25em;" for="search"><img src="assets/icons/search.svg" alt="Search"></label>
-                                <input style="border: 0;width:5rem;" type="text" id="searchInput" placeholder="Buscar...">
+                            <li class="nav-item px-1"
+                                style="display:flex;flex-direction: row;background-color:#ffffff; border-radius:0.5em;">
+                                <label style="padding-top: 0.25em;" for="search"><img src="assets/icons/search.svg"
+                                        alt="Search"></label>
+                                <input style="border: 0;width:5rem;" type="text" id="searchInput"
+                                    placeholder="Buscar...">
                             </li>
                             <li class="nav-item px-1 mx-2">
                                 <button class="btn btn-primary" poporvertarget="SingIn">Sing In</button>
@@ -49,7 +108,7 @@
         <section class="container-fluid mx-1 mb-2 video-header">
             <!-- Contenedor con video de fondo y controles de reproducción   autoplay loop muted-->
             <div class="container-fluid video-background embed-responsive-16by9">
-                <video class="embed-responsive-item" >
+                <video class="embed-responsive-item">
                     <source src="assets/video/King_s Man.mp4" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
                 </video>
@@ -65,17 +124,21 @@
                         </div>
                     </div>
                     <!-- Fila para los tres contenedores inferiores -->
-                    <div class="row align-items-center" style="background-color:transparent;backdrop-filter: blur(10px);border-radius: 10px;">
+                    <div class="row align-items-center" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 25%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.9) 100%);
+                    backdrop-filter: blur(10px);">
                         <!-- Primer contenedor: botones o enlaces -->
                         <div class="col-md-3">
-                            <button class="btn btn-primary w-100 h-25 my-1 font-weight-bolder bg-white text-black">Acept Free Trial</button>
-                            <button class="btn btn-primary w-100 h-25 my-1 font-weight-bolder bg-white text-black">Acept Free Trial</button>
+                            <button class="btn btn-primary w-100 h-25 my-1 font-weight-bolder bg-white text-black">Acept
+                                Free Trial</button>
+                            <button class="btn btn-primary w-100 h-25 my-1 font-weight-bolder bg-white text-black">Acept
+                                Free Trial</button>
                         </div>
-                        
                         <!-- Segundo contenedor: sinopsis -->
                         <div class="col-md-7">
-                            <p class="fs-6">Un grupo formado por los tiranos y las mentes criminales más malvadas de la historia se une para
-                                desencadenar una guerra que matará a millones de personas. Un hombre tendrá que luchar contra el mal y contra el
+                            <p class="fs-6">Un grupo formado por los tiranos y las mentes criminales más malvadas de la
+                                historia se une para
+                                desencadenar una guerra que matará a millones de personas. Un hombre tendrá que luchar
+                                contra el mal y contra el
                                 tiempo para detenerlos.</p>
                         </div>
                         <!-- Tercer contenedor: espacio publicitario o texto adicional -->
@@ -92,7 +155,6 @@
                                 </button>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -237,8 +299,9 @@
                     <h6 class="h6">Kingsman</h6>
                     <P class="text">ACTION</P>
                     <p>Un grupo formado por los tiranos y las mentes criminales más malvadas de la historia se une para
-                    desencadenar una guerra que matará a millones de personas. Un hombre tendrá que luchar contra el mal y contra el
-                    tiempo para detenerlos.</p>
+                        desencadenar una guerra que matará a millones de personas. Un hombre tendrá que luchar contra el
+                        mal y contra el
+                        tiempo para detenerlos.</p>
                 </div>
                 <div class="about-type container-fluid d-flex flex-column">
                     <h6>&#9989;17+</h6>
@@ -276,13 +339,11 @@
         </div>
         </div>
     </footer>
-    <footer class="container-fliud text-white text-center">
 
-    </footer>
     <script>
         $('#carouselExampleControls').carousel({
-                interval: false
-            })
+            interval: false
+        })
         let scrollHeight = Math.max(
             document.body.scrollHeight, document.documentElement.scrollHeight,
             document.body.offsetHeight, document.documentElement.offsetHeight,
